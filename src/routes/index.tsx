@@ -4,6 +4,7 @@ import { For } from "solid-js";
 import Counter from "~/components/Counter";
 
 const getBlogPosts = cache(async () => {
+  "use server";
   const data = await basehub().query({
     blog: {
       posts: {
